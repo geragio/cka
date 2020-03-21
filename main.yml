@@ -1,0 +1,12 @@
+---
+
+- name: Prepare Kubernetes cluster
+  hosts: all
+  remote_user: root
+  roles:
+
+    - update
+    - selinux
+    - firewall
+    - docker
+    - kubetools

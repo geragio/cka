@@ -1,0 +1,7 @@
+---
+
+- name: Ensure firewalld is stopped
+  systemd:
+    name: firewalld
+    state: stopped
+    enabled: no
