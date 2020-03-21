@@ -23,6 +23,11 @@
     update_cache: yes
     state: latest
 
+- name: Setup Docker daemon
+  copy:
+    src: files/daemon.json
+    dest: /etc/docker/daemon.json
+
 - name: Start Docker
   systemd:
     name: docker
