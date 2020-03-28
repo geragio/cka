@@ -28,9 +28,9 @@
 - name: Install kube tools
   yum:
     name:
-      - kubelet
-      - kubeadm
-      - kubectl
+      - kubelet-{{ kube-version }}
+      - kubeadm-{{ kube-version }}
+      - kubectl-{{ kube-version }}
     state: present
 
 - name: Ensure kubelet is enabled
@@ -38,6 +38,3 @@
     name: kubelet
     state: started
     enabled: yes
-
-
-
